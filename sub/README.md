@@ -20,6 +20,8 @@ curl -s 'https://github.com/ifkit/submodules?go-get=1' | grep 'go-import'
 
 usage:
 ```
+tail -n +1 *
+
 ==> go.mod <==
 module subtest
 
