@@ -20,7 +20,6 @@ curl -s 'https://github.com/ifkit/submodules?go-get=1' | grep 'go-import'
 
 usage:
 ```
-tail -n +1 *
 ==> go.mod <==
 module subtest
 
@@ -28,7 +27,7 @@ go 1.24.1
 
 require github.com/ifkit/submodules/sub v1.2.3
 
-require github.com/ifkit/submodules/sub/v2 v2.3.4 // indirect
+require github.com/ifkit/submodules/sub/v2 v2.3.4
 
 ==> go.sum <==
 github.com/ifkit/submodules/sub v1.2.3 h1:J85vj47eatTQ47iWXOCK4/1zJ4Q/AP7G9tAnUN5eCGk=
@@ -40,12 +39,12 @@ github.com/ifkit/submodules/sub/v2 v2.3.4/go.mod h1:uRO+JXZsE/Af4xUtpxJtmqPuq7y0
 package main
 
 import (
-        "github.com/ifkit/submodules/sub"
-        v2 "github.com/ifkit/submodules/sub/v2"
+	"github.com/ifkit/submodules/sub"
+	v2 "github.com/ifkit/submodules/sub/v2"
 )
 
 func main() {
-        sub.Hello()
-        v2.Hello()
+	sub.Hello()
+	v2.Hello()
 }
 ```
