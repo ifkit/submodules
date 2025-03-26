@@ -11,3 +11,8 @@ it works even with git alone
 ```
 GONOPROXY='github.com/ifkit/*' GOPRIVATE='github.com/ifkit/*' go get -x github.com/ifkit/submodules/sub/v2@v2.3.4
 ```
+
+```
+curl -s 'https://github.com/ifkit/submodules?go-get=1' | grep 'go-import'
+  <meta name="go-import" content="github.com/ifkit/submodules git https://github.com/ifkit/submodules.git">
+```
